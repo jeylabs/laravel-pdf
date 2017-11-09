@@ -24,7 +24,7 @@ class Pdf {
 		}
 
 		$this->mpdf = new Mpdf([
-		    'tempDir' => Config::get('pdf.custom_font_data'),
+		    'tempDir' => $this->getConfig('temp_dir'),
 		    $this->getConfig('mode'),              // mode - default ''
 		    $this->getConfig('format'),            // format - A4, for example, default ''
 		    $this->getConfig('default_font_size'), // font size - default 0
